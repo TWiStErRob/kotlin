@@ -4,11 +4,17 @@ public open class ArithmeticExpressionInParam {
     public constructor ArithmeticExpressionInParam()
 
     public final annotation class Anno : kotlin.Annotation {
-        public constructor Anno(/*0*/ value: kotlin.Int)
-        public final val value: kotlin.Int
+        public constructor Anno(/*0*/ value: kotlin.Double)
+        public final val value: kotlin.Double
     }
 
-    @test.ArithmeticExpressionInParam.Anno(value = 42) public open class Class {
+    @test.ArithmeticExpressionInParam.Anno(value = -Infinity.toDouble()) public open class Class1 {
+        public constructor Class()
+    }
+    @test.ArithmeticExpressionInParam.Anno(value = Infinity.toDouble()) public open class Class2 {
+        public constructor Class()
+    }
+    @test.ArithmeticExpressionInParam.Anno(value = 0.0) public open class Class3 {
         public constructor Class()
     }
 }

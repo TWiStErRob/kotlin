@@ -2,9 +2,13 @@ package test;
 
 public class ArithmeticExpressionInParam {
     public @interface Anno {
-        int value();
+        double value();
     }
 
-    @Anno(2 * 8 + 13 * (239 - 237))
-    public static class Class {}
+    @Anno(-1.0/0.0)
+    public static class Class1 {}
+    @Anno(1.0/0.0)
+    public static class Class2 {}
+    @Anno(0.0)
+    public static class Class3 {}
 }
